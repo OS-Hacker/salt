@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root {
+  --primary-color: #000000;
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --section-space: clamp(70px, 8vw, 140px);
+  --container-width: 1400px;
+  --container-padding: clamp(16px, 3vw, 40px);
+  --radius-primary: 24px;
+  --transition-primary: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   MEDIA FIXES
+========================= */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* =========================
+   COMMON CLASSES
+========================= */
+
+.section-space {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+}
+
+/* Global Container */
+.primary-container {
+  width: min(
+    calc(100% - (var(--container-padding) * 2)),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+}
+
+.heading-sm {
+  font-size: clamp(25px, 1.5vw, 25px);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.heading-lg {
+  font-size: clamp(32px, 4vw, 64px);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.heading-md {
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.text-lg {
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.7;
+}
+
+.card-blur {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.transition-primary {
+  transition: all var(--transition-primary);
+}
+
+/* =========================
+   CUSTOM SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 100px;
+}
+
+/* =========================
+   RESPONSIVE FIXES
+========================= */
+
+@media (max-width: 768px) {
+  br {
+    display: none;
+  }
+}
+
+/* swipper */
+.product-swiper {
+  padding-bottom: 60px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #000;
+  opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* logo marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
