@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import Button from "../style/Button";
 import ProductDetailsTabs from "../components/ShippingContent";
+import Breadcrumb from '../components/Breadcrumb'
+import RelatedProducts from '../components/RelatedProducts'
 
 const ProductDetailsSection = () => {
   const product = {
@@ -28,10 +30,12 @@ const ProductDetailsSection = () => {
   const [mainImage, setMainImage] = useState(product.images[0]);
 
   return (
-    <section className="w-full py-12">
-      <div className="primary-container max-w-7xl mx-auto px-4">
+    <div className="w-full">
+      <div className="primary-container">
+       <Breadcrumb/>
+
         {/* Product Top Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Images Section */}
           <div className="flex gap-4">
             {/* Thumbnails */}
@@ -56,14 +60,14 @@ const ProductDetailsSection = () => {
               <img
                 src={mainImage}
                 alt={product.name}
-                className=" w-[395px] h-[448px] object-cover"
+                className=" w-[500px] h-[448px] object-cover"
               />
             </div>
           </div>
 
           {/* Product Info */}
           <div className="flex flex-col justify-between">
-            <div>
+            <div className="w-[526px] h-[332px]">
               <h1 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">
                 {product.name}
               </h1>
@@ -102,11 +106,12 @@ const ProductDetailsSection = () => {
           </div>
         </div>
 
-        {/* details */}
-
+        {/* details tabs */}
         <ProductDetailsTabs/>
+
+        <RelatedProducts/>
       </div>
-    </section>
+    </div>
   );
 };
 

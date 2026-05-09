@@ -5,6 +5,7 @@ import skf from '../assets/images/skf.webp'
 import dharma from '../assets/images/dharma.png'
 import actor from '../assets/images/actor.png'
 import excel from '../assets/images/excel.png'
+import sony from '../assets/images/sony.jpeg'
 
 
 const logos = [
@@ -14,11 +15,12 @@ const logos = [
   { src: dharma, alt: 'Dharma Productions' },
   { src: actor, alt: 'Actor Prepares' },
   { src: excel, alt: 'Excel' },
+  { src: sony, alt: 'sony' },
 ]
 
 const LogoMarquee = () => {
   return (
-    <section className='w-full py-20 overflow-hidden'>
+    <section className='w-full overflow-hidden my-5'>
       <div className='flex animate-marquee whitespace-nowrap'>
         {/* Render twice for seamless loop */}
         {[...logos, ...logos].map((logo, index) => (

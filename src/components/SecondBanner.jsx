@@ -3,7 +3,7 @@ import secondBanner_img  from "../assets/images/rounded-banner-7.jpg"
 
 const SecondBanner = () => {
   return (
-    <section className="py-10">
+    <section className="mt-10">
 
       <div className="primary-container">
 
@@ -17,8 +17,6 @@ const SecondBanner = () => {
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
 
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/40"></div>
 
           {/* Content */}
           <div className="absolute inset-0 flex items-center">

@@ -8,7 +8,7 @@ const Breadcrumb = () => {
   const paths = location.pathname.split('/').filter(Boolean)
 
   return (
-    <div className="w-full pt-8 pb-14 border-gray-200">
+    <section className="w-full my-6 border-gray-200">
       <div className="primary-container">
         <nav className="flex items-center gap-2 text-[15px] text-gray-500">
           <Link to="/" className="hover:text-gray-900 transition">Home</Link>
@@ -32,7 +32,7 @@ const Breadcrumb = () => {
           })}
         </nav>
       </div>
-    </div>
+    </section>
   )
 }
 

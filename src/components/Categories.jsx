@@ -1,65 +1,61 @@
-import React from "react";
-
-import {
-  PiLampPendantFill,
-  PiOfficeChairFill,
-  PiDeskFill,
-  PiHandbagFill,
-} from "react-icons/pi";
-
-import { GiRoundTable } from "react-icons/gi";
+import bag from "../assets/images/bags.webp";
+import chairm from "../assets/images/cat-chair.png";
+import desk from "../assets/images/cat-desk.png";
+import table from "../assets/images/cat-table.png";
+import lamp from "../assets/images/lamp.png";
+import officeF from "../assets/images/officeFu.png";
 
 const categories = [
   {
     id: 1,
     title: "Travel Bags",
-    icon: <PiHandbagFill />,
+    img: bag,
   },
   {
     id: 2,
     title: "Chairs",
-    icon: <PiOfficeChairFill />,
+    img: chairm,
   },
   {
     id: 3,
     title: "Desk",
-    icon: <PiDeskFill />,
+    img: desk,
   },
   {
     id: 4,
     title: "Tables",
-    icon: <GiRoundTable />,
+    img: table,
   },
   {
     id: 5,
     title: "Lamp",
-    icon: <PiLampPendantFill />,
+    img: lamp,
   },
   {
     id: 6,
     title: "Office Furniture",
-    icon: <PiOfficeChairFill />,
+    img: officeF,
   },
   {
     id: 7,
     title: "Travel Bags",
-    icon: <PiHandbagFill />,
+    img: bag,
   },
   {
     id: 8,
     title: "Chairs",
-    icon: <PiOfficeChairFill />,
+    img: chairm,
   },
   {
     id: 9,
     title: "Desk",
-    icon: <PiDeskFill />,
+    img: desk,
   },
 ];
 
 const Categories = () => {
   return (
-    <section className="py-5 bg-[#f7f7f7]">
+    <section className="">
       <div className="primary-container">
         {/* ================= HEADING ================= */}
         <div className="text-center mb-14">
@@ -87,8 +83,14 @@ const Categories = () => {
                 hover:-translate-y-1
               "
             >
-              {/* Icon */}
-              <span className="text-xl shrink-0">{item.icon}</span>
+              {/* img */}
+              <div className="w-[28px] h-[30px]">
+                <img
+                  src={item.img}
+                  alt="img"
+                  className="w-full h-full object-contain"
+                />
+              </div>
 
               {/* Text */}
               <span className="text-sm font-medium whitespace-nowrap">

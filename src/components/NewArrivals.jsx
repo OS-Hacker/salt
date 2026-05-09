@@ -54,7 +54,7 @@ const NewArrivals = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="py-14 bg-[#f7f7f7] overflow-hidden">
+    <section className="overflow-hidden">
       <div className="primary-container">
         .{/* ================= HEADER ================= */}
         <div className="flex items-center justify-between mb-4">
@@ -105,7 +105,7 @@ const NewArrivals = () => {
             <SwiperSlide key={product.id}>
               <div className="group w-67.5 h-83.5">
                 {/* Image Card */}
-                <div className="relative bg-[#f3f3f3] rounded-[28px] overflow-hidden p-6 h-69 w-67.5 flex items-center justify-center">
+                <div className="relative bg-[#fafafa] rounded-[10px] overflow-hidden p-6 h-69 w-67.5 flex items-center justify-center">
                   <img
                     src={product.image}
                     alt={product.title}

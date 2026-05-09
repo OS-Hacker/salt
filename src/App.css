@@ -41,6 +41,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+section {
+  width: 100%;
+  padding: 30px 0;
+}
+
 /* =========================
    MEDIA FIXES
 ========================= */
@@ -154,8 +159,12 @@ select {
 
 /* logo marquee */
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {

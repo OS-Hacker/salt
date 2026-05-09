@@ -54,7 +54,7 @@ const FeatureSwipper = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="py-14 bg-[#f7f7f7] overflow-hidden">
+    <section className="overflow-hidden">
       <div className="primary-container">
         .{/* ================= HEADER ================= */}
         <div className="flex items-center justify-between mb-5">

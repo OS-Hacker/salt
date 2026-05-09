@@ -3,7 +3,7 @@ import bannerImg from "../assets/images/slide2-demo6.jpg"
 
 const Banner = () => {
   return (
-    <section className="relative w-full h-[500px] sm:h-[600px] lg:h-[600px] overflow-hidden">
+    <div className="relative w-full h-[500px] sm:h-[600px] lg:h-[600px] overflow-hidden">
 
       {/* Image */}
       <img
@@ -35,7 +35,7 @@ const Banner = () => {
         </div>
       </div>
 
-    </section>
+    </div>
   );
 };
 

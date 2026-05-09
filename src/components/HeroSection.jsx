@@ -5,12 +5,12 @@ import banner_1 from "../assets/images/default-banner-12.jpg"
 
 const HeroSection = () => {
   return (
-    <section className="py-14">
+    <section className="mt-10">
       <div className="primary-container">
         {/* Grid */}
         <div className="flex justify-center gap-6 items-center ">
           {/* ================= LEFT CARD ================= */}
-          <div className="relative overflow-hidden rounded-[15px] w-[820px] h-[411px] group">
+          <div className="relative overflow-hidden rounded-[15px] w-[920px] h-[411px] group">
             {/* Image */}
             <img
               src={banner_1}
@@ -18,8 +18,6 @@ const HeroSection = () => {
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/40"></div>
 
             {/* Content */}
             <div className="absolute inset-0 p-8 sm:p-12 flex flex-col justify-center">
@@ -34,16 +32,13 @@ const HeroSection = () => {
           </div>
 
           {/* ================= RIGHT CARD ================= */}
-          <div className="relative overflow-hidden w-[420px] h-[411px] rounded-[15px]  group">
+          <div className="relative overflow-hidden w-[470px] h-[411px] rounded-[15px]  group">
             {/* Image */}
             <img
               src={banner_2}
               alt="Bathroom"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/20"></div>
 
             {/* Content */}
             <div className="absolute inset-0 p-8 flex flex-col justify-center">
