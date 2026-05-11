@@ -6,14 +6,31 @@ import Rent from "./pages/Rent";
 import Category from "./pages/Category";
 import Resources from "./pages/Resources";
 import Footer from "./components/Footer";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import ProductListing from "./pages/ProductListing";
 import ProductDetails from "./pages/ProductDetails";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
+  const location = useLocation();
+
+  // All valid routes
+  const validRoutes = [
+    "/",
+    "/rent",
+    "/category",
+    "/about",
+    "/resources",
+    "/products",
+    "/product-details",
+  ];
+
+  // Check if current route is NOT valid
+  const hideLayout = !validRoutes.includes(location.pathname);
+
   return (
     <div>
-      <Navbar />
+      {!hideLayout && <Navbar />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,9 +40,12 @@ const App = () => {
         <Route path="/resources" element={<Resources />} />
         <Route path="/products" element={<ProductListing />} />
         <Route path="/product-details" element={<ProductDetails />} />
+
+        {/* Not Found Route */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
-      <Footer />
+      {!hideLayout && <Footer />}
     </div>
   );
 };

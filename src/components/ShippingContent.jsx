@@ -10,11 +10,12 @@ function Tabs({ tabs, activeTab, onChange }) {
           role="tab"
           aria-selected={activeTab === tab.id}
           onClick={() => onChange(tab.id)}
-          className={`relative px-6 py-4 text-sm font-medium tracking-wide uppercase whitespace-nowrap transition-colors duration-200
-            ${activeTab === tab.id
-              ? "text-gray-900 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-gray-900"
-              : "text-gray-400 hover:text-gray-700"
-            }`}
+          className={`relative px-6 py-3 text-sm font-bold tracking-wide cursor-pointer uppercase whitespace-nowrap transition-colors duration-200
+        ${
+          activeTab === tab.id
+            ? "text-gray-900 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-gray-900"
+            : "text-gray-400 hover:text-gray-700"
+        }`}
         >
           {tab.label}
         </button>
@@ -172,7 +173,7 @@ function ProductDetailsContent() {
 // ─── Tab Config  (edit here to add/remove tabs) ───────────────────────────────
 const TABS = [
   { id: "details",  label: "Product Details" },
-  // { id: "shipping", label: "Shipping & Returns" },
+  { id: "shipping", label: "Shipping & Returns" },
   // { id: "size",     label: "Size Guide" },
   // { id: "reviews",  label: "Reviews" },
 ];
@@ -194,7 +195,7 @@ const TAB_CONTENT = {
       <Tabs tabs={TABS} activeTab={active} onChange={setActive} />
 
       {/* Panel — key forces re-mount so content animates on switch */}
-      <div key={active} className="pt-8">
+      <div key={active} className="pt-5">
         {TAB_CONTENT[active]}
       </div>
     </section>

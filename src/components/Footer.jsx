@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/images/logo.jpeg"
 import { FaInstagram, FaTwitter, FaFacebookF, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
           {/* Logo + Description */}
           <div className="flex flex-col w-full md:w-auto max-w-[250px]">
             <img
-              src="/assets/logo.png"
+              src={logo}
               alt="Salt The Prop Store"
               className="w-[180px] h-auto object-contain mb-6"
             />
